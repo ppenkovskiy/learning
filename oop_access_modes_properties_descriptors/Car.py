@@ -18,3 +18,4 @@ class Car:
 
 car = Car()
 car.model = "Toyota"
+print(car.model)
