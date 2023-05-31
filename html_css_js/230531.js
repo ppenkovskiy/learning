@@ -247,3 +247,12 @@ function add(x,y){
 }
 let result = add(5,6);
 console.log(result);
+
+function add(x,y){
+    return x+y;
+    //the code below will be ignored
+    console.log('Done!');
+}
+let result = add(5,6);
+console.log(result);
+
