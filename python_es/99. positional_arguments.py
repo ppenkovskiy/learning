@@ -22,8 +22,5 @@ print(assert_equal(1, 1))
 print(assert_equal(1, 2, fail_messsage='left not'))
 
 
-
-def copy(*, source, destination, overwrite=False):
-    print(f"Copying {source} to {destination} with overwrite = {overwrite}")
-
+# finish later
     
