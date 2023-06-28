@@ -4,7 +4,7 @@ import random
 class GuessTheWord:
 
     def __init__(self, mistakes=10):
-        with open('WordsStockRus.txt', mode='r', encoding='utf-8') as file:
+        with open('../WordsStockRus.txt', mode='r', encoding='utf-8') as file:
             words = file.readlines()
             word = words[random.randint(0, len(words) - 1)].strip()
         self.mistakes = mistakes
