@@ -1,11 +1,7 @@
 from typing import List, Callable
 from game_result import GameResult
+from game_status import GameStatus
 from question import Question
-
-
-class GameStatus:
-    IN_PROGRESS = 1
-    GAME_IS_OVER = 2
 
 
 class Game:
@@ -50,8 +46,9 @@ class Game:
                 q = self.__parse_line(line)
                 questions.append(q)
 
-    def __parse_line(self, line) -> Question:
-        parts = line.strip(";")
+    @staticmethod
+    def __parse_line(line) -> Question:
+        parts = line.split(";")
         text = parts[0]
         is_correct = parts[1] == 'Yes'
         explanation = parts[2]
