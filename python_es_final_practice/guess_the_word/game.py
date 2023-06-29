@@ -41,6 +41,7 @@ class Game:
             raise InvalidOperationException(f"Inappropriate status of game: {GameStatus}")
 
         open_any = False
+
         result = []
 
         for i in range(len(self.word)):
