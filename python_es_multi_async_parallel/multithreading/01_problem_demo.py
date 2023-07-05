@@ -27,7 +27,3 @@ if __name__ == '__main__':
 
     print('What are we waiting for?')
     print("Ended main")
-
-
-
-
