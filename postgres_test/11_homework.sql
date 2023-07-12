@@ -1,13 +1,15 @@
-select * from customers;
+SELECT * FROM customers;
 
-select contact_name, city
-from customers;
+SELECT contact_name, city
+FROM customers;
 
-select order_id, shipped_date - order_date
-from orders;
+SELECT order_id, shipped_date - order_date
+FROM orders;
 
-select  distinct city from customers;
+SELECT DISTINCT city FROM customers;
 
-select count(customer_id) from customers;
+SELECT count(customer_id) FROM customers;
+-- or
+SELECT count(*) FROM customers;
 
-select count(distinct country) from customers
+SELECT count(DISTINCT country) FROM customers

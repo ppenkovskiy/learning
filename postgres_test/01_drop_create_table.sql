@@ -15,4 +15,3 @@ CREATE TABLE book
     title   text        NOT NULL,
     isbn    varchar(32) NOT NULL
 )
-
