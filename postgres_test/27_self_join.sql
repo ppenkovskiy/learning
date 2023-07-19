@@ -20,4 +20,7 @@ select e.first_name || ' ' || e.last_name as employee, -- || - union operator
        m.first_name || ' ' || e.last_name as manager
 from employee e
 left join employee m on m.employee_id = e.manager_id
-order by manager
+order by manager;
+
+drop table employee
+
