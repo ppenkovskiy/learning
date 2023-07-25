@@ -11,7 +11,25 @@ create table customer
 );
 
 insert into customer (full_name)
-values ('name');
+values ('name_1');
 
 select * from customer;
+
+alter table customer
+alter column status drop default;
+
+insert into customer (full_name)
+values ('name_2');
+
+select * from customer;
+
+alter table customer
+alter column status set default 'r';
+
+insert into customer (full_name)
+values ('name_3');
+
+select * from customer;
+
+
 
