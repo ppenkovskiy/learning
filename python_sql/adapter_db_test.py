@@ -19,3 +19,7 @@ cur.execute("""
             """, ('name_2', 1001))
 
 conn.commit()
+
+cur.execute("CREATE TABLE traffic_light (light_id serial PRIMARY KEY, light text);")
+
+cur.execute("INSET INTO traffic_light(light) ")
