@@ -3,22 +3,17 @@ class Person:
         self.__name = name
         self.__old = old
 
-    @property
-    def old(self):
+    def get_old(self):
         return self.__old
 
-    @old.setter
-    def old(self, old):
+    def set_old(self, old):
         self.__old = old
 
-    @old.deleter
-    def old(self):
-        del self.__old
+    # Setting "old" an object of the class property
+    old = property(get_old, set_old)
 
 
-p = Person('Pavel', 18)
+p = Person('Person_1', 20)
 print(p.old)
-p.old = 20
-print(p.old)
-del p.old
-print(p.__dict__)
+p.old = 35
+print(p.old, p.__dict__)
