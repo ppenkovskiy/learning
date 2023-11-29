@@ -32,5 +32,5 @@ class Rectangle:
         return self.__sp, self.__ep
 
     def draw(self):
-        print(f'Прямоугольник с координатами: ({self.a}, {self.b}) ({self.c}, {self.d})')
+        print(f'Rectangle with coordinates: ({self.a}, {self.b}) ({self.c}, {self.d})')
 
