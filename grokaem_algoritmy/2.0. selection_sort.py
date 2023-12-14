@@ -1,3 +1,6 @@
+# Сортировка выбором
+# O(n*n)
+
 def find_smallest(arr):
     smallest = arr[0]
     smallest_index = 0
