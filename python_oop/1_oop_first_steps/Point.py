@@ -8,7 +8,7 @@ class Point:
 
     def get_coords(self):
         return self.x, self.y
-  
+
 
 pt = Point()
 pt2 = Point()

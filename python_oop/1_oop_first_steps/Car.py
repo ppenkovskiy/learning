@@ -1,6 +1,3 @@
-# https://stepik.org/lesson/701973/step/6?unit=702074
-
-
 class Car:
     pass
 

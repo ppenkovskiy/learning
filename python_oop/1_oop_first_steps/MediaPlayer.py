@@ -1,5 +1,3 @@
-# https://stepik.org/lesson/701974/step/5?unit=702075
-
 class MediaPlayer:
     def open(self, file):
         self.filename = file

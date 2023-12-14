@@ -1,4 +1,3 @@
-# https://stepik.org/lesson/701975/step/6?thread=solutions&unit=702076
 class TriangleChecker:
     def __init__(self, a, b, c):
         self.lst = [a, b, c]
@@ -15,7 +14,6 @@ class TriangleChecker:
 a, b, c = map(int, input().split())
 tr = TriangleChecker(a, b, c)
 print(tr.is_triangle())
-
 
 a, b, c = 3.0, 4.0, 5.0
 tr = TriangleChecker(a, b, c)

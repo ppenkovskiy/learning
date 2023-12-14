@@ -1,5 +1,3 @@
-# https://stepik.org/lesson/701974/step/6?unit=702075
-
 class Graph:
     LIMIT_Y = [0, 10]
     

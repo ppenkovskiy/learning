@@ -1,5 +1,3 @@
-# https://stepik.org/lesson/701978/step/8?unit=702079
-
 from string import ascii_lowercase, digits
 
 

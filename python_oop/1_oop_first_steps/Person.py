@@ -1,7 +1,7 @@
 class Person:
-    name = 'Pavel Penkovskiy'
-    job = 'Programmer'
-    city = 'Minsk'
+    name = 'Name'
+    job = 'Engineer'
+    city = 'City'
 
 
 p1 = Person()

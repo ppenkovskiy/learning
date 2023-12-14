@@ -6,7 +6,7 @@ class Video:
         self.name = name
 
     def play(self):
-        print(f'воспроизведение видео {self.name}')
+        print(f'Playing video {self.name}')
 
 
 class YouTube:
@@ -23,8 +23,8 @@ class YouTube:
 
 v1 = Video()
 v2 = Video()
-v1.create("Python")
-v2.create("Python ООП")
+v1.create("Python_1")
+v2.create("Python_2")
 YouTube.add_video(v1)
 YouTube.add_video(v2)
 YouTube.play(0)

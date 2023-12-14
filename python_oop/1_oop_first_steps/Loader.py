@@ -1,5 +1,3 @@
-# https://stepik.org/lesson/701978/step/7?unit=702079
-
 class Factory:
     @staticmethod
     def build_sequence():
