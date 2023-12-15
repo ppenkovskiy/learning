@@ -1,4 +1,4 @@
-# Сортировка выбором
+# Sorting by choice.
 # O(n*n)
 
 def find_smallest(arr):
