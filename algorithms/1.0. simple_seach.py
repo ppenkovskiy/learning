@@ -1,5 +1,5 @@
 # Simple search
-# O(n)
+# O(n) (простой поиск выполняется за линейное время)
 def simple_search(matrix, value):
     for i in range(len(matrix)):
         if matrix[i] == value:

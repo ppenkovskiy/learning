@@ -1,5 +1,6 @@
 # Binary search
 # O(log_n)
+# Бинарный поиск выполняется за логирифмическое время.
 def binary_search(list, item):
     low_indx = 0
     high_indx = len(list) - 1
