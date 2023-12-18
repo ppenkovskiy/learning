@@ -5,6 +5,7 @@ class ListNode:
         self.val = val
         self.next = None
 
+
 class Solution:
     def __init__(self):
         # Link to the first node of the list.
