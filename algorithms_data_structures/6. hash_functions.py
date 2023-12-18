@@ -1,5 +1,4 @@
-# Поиск в хеш-таблице выполняется за постоянное время.
-# O(1)
+# A hash table lookup is performed in constant time - O(1)
 book = {}
 book['apple'] = 0.67
 book['avocado'] = 1.49

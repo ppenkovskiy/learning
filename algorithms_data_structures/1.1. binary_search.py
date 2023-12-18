@@ -1,6 +1,4 @@
-# Binary search
-# O(log_n)
-# Бинарный поиск выполняется за логирифмическое время.
+# Binary search is performed in logarithmic time - O(log_n)
 def binary_search(list, item):
     low_indx = 0
     high_indx = len(list) - 1
@@ -21,9 +19,9 @@ my_list = [1, 3, 5, 7, 9, 10, 11, 20, 50, 60, 70]
 print(binary_search(my_list, 70))
 print(binary_search(my_list, -1))
 
-
 # Number of iterations in binary search
 import math
+
 print(int(math.log2(128)))
 print(int(math.log2(256)))
 print(math.log2(100))
