@@ -1,17 +1,15 @@
 with open('5_input.txt', 'r') as file:
     N = int(file.readline())
     l = [i.rstrip('\n').split(',') for i in file.readlines()]
-    print(l)
 
 v_symbols = []
 for i in range(N):
-    v_symbols.append(len(set(l[i][0]+l[i][1]+l[i][2])))
-print(v_symbols)
+    v_symbols.append(len(set(l[i][0] + l[i][1] + l[i][2])))
 
 day_month = []
 for i in range(N):
-    day_month.append((int(l[i][3])+int(l[i][4]))*64)
-print(day_month)
+    d_m_64 = sum([int(k) for k in list(l[i][3]) + list(l[i][4])]) * 64
+    day_month.append(d_m_64)
 
 alphabet_dict = {'a': 1,
                  'b': 2,
@@ -43,9 +41,15 @@ alphabet_dict = {'a': 1,
 first_letter = []
 for i in range(N):
     letter = l[i][0][0].lower()
-    first_letter.append(alphabet_dict[letter]*256)
-print(first_letter)
+    first_letter.append(alphabet_dict[letter] * 256)
 
 res = []
 for i in range(N):
-    res.append(v_symbols[i] +day_month[i] )
+    res.append(v_symbols[i] + day_month[i] + first_letter[i])
+
+res = [hex(r)[2:] for r in res]
+res = [r[-3:].upper() + '\n' for r in res]
+
+with open('5_output.txt', 'w') as file:
+    for i in range(N):
+        file.write(res[i])
