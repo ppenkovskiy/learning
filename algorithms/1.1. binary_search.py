@@ -1,4 +1,4 @@
-# Binary search is performed in logarithmic time - O(log_n)
+# Binary search is performed in logarithmic time - O(log_n).
 def binary_search(list, item):
     low_indx = 0
     high_indx = len(list) - 1
