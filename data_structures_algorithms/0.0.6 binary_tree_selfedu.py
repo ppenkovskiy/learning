@@ -50,6 +50,22 @@ class Tree:
         print(node.data)
         self.show_tree(node.right)
 
+    def __del_leaf(self, s, p):
+
+
+    def del_node(self, key):
+        s, p, fl_find = self.__find(self.root, None, key)
+
+        if not fl_find:
+            return None
+
+        if s.left is None and s.right is None:
+            # s - node to be deleted
+            # p - parent node
+            self.__del_leaf(s, p)
+
+
+
 
 v = [10, 5, 7, 16, 13, 2, 20]
 
