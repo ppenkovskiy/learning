@@ -1,6 +1,5 @@
 class Node:
     def __init__(self, data):
-        # creating list node
         self.data = data
         self.right = self.left = None
 
@@ -14,7 +13,6 @@ class Tree:
             return None, parent, False
 
         if value == node.data:
-            # 'True' means the required value is found
             return node, parent, True
 
         if value < node.data:
@@ -50,8 +48,45 @@ class Tree:
         print(node.data)
         self.show_tree(node.right)
 
-    def __del_leaf(self, s, p):
+    def show_wide_tree(self, node):
+        if node is None:
+            return
 
+        v = [node]
+        while v:
+            vn = []
+            for x in v:
+                print(x.data, end=' ')
+
+                if x.left:
+                    vn += [x.left]
+                if x.right:
+                    vn += [x.right]
+            print()
+            v = vn
+
+    def __del_leaf(self, s, p):
+        if p.left == s:
+            p.left = None
+        elif p.right == s:
+            p.right = None
+
+    def __del_one_child(self, s, p):
+        if p.left == s:
+            if s.left is None:
+                p.left = s.right
+            elif s.right is None:
+                p.left = s.left
+        elif p.right == s:
+            if s.left is None:
+                p.right = s.right
+            elif s.right is None:
+                p.right = s.left
+
+    def __find_min(self, node, parent):
+        if node.left:
+            return self.__find_min(node.left, node)
+        return node, parent
 
     def del_node(self, key):
         s, p, fl_find = self.__find(self.root, None, key)
@@ -60,17 +95,20 @@ class Tree:
             return None
 
         if s.left is None and s.right is None:
-            # s - node to be deleted
-            # p - parent node
             self.__del_leaf(s, p)
+        elif s.left is None or s.right is None:
+            self.__del_one_child(s, p)
+        else:
+            sr, pr = self.__find_min(s.right, s)
+            s.data = sr.data
+            self.__del_one_child(sr, pr)
 
 
-
-
-v = [10, 5, 7, 16, 13, 2, 20]
+v = [20, 5, 24, 2, 16, 11, 18]
 
 t = Tree()
 for x in v:
     t.append(Node(x))
 
-t.show_tree(t.root)
+t.del_node(5)
+t.show_wide_tree(t.root)
