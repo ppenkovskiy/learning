@@ -1,5 +1,4 @@
-# Simple search
-# O(n) (простой поиск выполняется за линейное время)
+# Simple search is performed in linear time - O(n)
 def simple_search(matrix, value):
     for i in range(len(matrix)):
         if matrix[i] == value:

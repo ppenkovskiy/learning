@@ -4,7 +4,8 @@ class Node:
         self.right = None
         self.val = key
 
-# Breadth first search - поиск в ширину.
+
+# Breadth first search.
 def breadth_first_search(root):
     if root is None:
         return []
@@ -23,6 +24,7 @@ def breadth_first_search(root):
 
     return result
 
+
 # Example usage:
 # Constructing a simple binary tree:
 #         1
@@ -33,8 +35,8 @@ def breadth_first_search(root):
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
+root.left.left = Node(10)
+root.left.right = Node(4)
 
 # Perform BFS and print the result
 result_bfs = breadth_first_search(root)

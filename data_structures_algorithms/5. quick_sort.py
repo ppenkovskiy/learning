@@ -1,7 +1,6 @@
-# Quicksort
-# O(n*log_n)
+# Quicksort- O(n*log_n)
 def quicksort(array):
-    if len(array) < 2:
+    if len(array) <= 1:  # base case
         return array
     else:
         pivot = array[0]  # recursive case
