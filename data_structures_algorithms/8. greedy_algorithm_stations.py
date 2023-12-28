@@ -8,10 +8,15 @@ stations['k_four'] = set(['nv', 'ut'])
 stations['k_five'] = set(['ca', 'az'])
 
 final_stations = set()
+i = 1
 
 while states_needed:
     best_station = None
     states_covered = set()
+
+    print(f"Iteration {i}")
+    print(f'Final stations: {final_stations}.')
+    i += 1
 
     for station, states_for_station in stations.items():
         covered = states_needed & states_for_station  # sets intersection
@@ -22,4 +27,5 @@ while states_needed:
     states_needed -= states_covered
     final_stations.add(best_station)
 
-print(final_stations)
+print(f"Iteration {i}")
+print(f'Final stations: {final_stations}.')
