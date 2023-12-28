@@ -1,39 +1,30 @@
 graph = {}
 
 graph['start'] = {}
-graph['start']['a'] = 2
-graph['start']['b'] = 5
+graph['start']['a'] = 10
 
 graph['a'] = {}
-graph['a']['b'] = 8
-graph['a']['d'] = 7
+graph['a']['c'] = 20
 
 graph['b'] = {}
-graph['b']['c'] = 4
-graph['b']['d'] = 2
+graph['b']['a'] = 1
+graph['b']['c'] = 1
 
 graph['c'] = {}
-graph['c']['d'] = 6
-graph['c']['fin'] = 3
-
-graph['d'] = {}
-graph['d']['fin'] = 1
+graph['c']['fin'] = 30
 
 graph['fin'] = {}
 
-infinity = float('inf')
 costs = {}
-costs['a'] = 2
-costs['b'] = 5
-costs['c'] = infinity
-costs['d'] = infinity
-costs['fin'] = infinity
+costs['a'] = 10
+costs['b'] = float('inf')
+costs['c'] = float('inf')
+costs['fin'] = float('inf')
 
 parents = {}
 parents['a'] = 'start'
-parents['b'] = 'start'
+parents['b'] = None
 parents['c'] = None
-parents['d'] = None
 parents['fin'] = None
 
 processed_nodes = []

@@ -1,22 +1,19 @@
 graph = {}
+
 graph['start'] = {}
 graph['start']['a'] = 6
 graph['start']['b'] = 2
 
-# print(type(graph['start']))
-# print(graph['start'].keys())
-# print(graph['start']['a'])
-# print(graph['start']['b'])
-
 graph['a'] = {}
 graph['a']['fin'] = 1
+
 graph['b'] = {}
 graph['b']['a'] = 3
 graph['b']['fin'] = 5
+
 graph['fin'] = {}  # end node has no neighbors
 
 infinity = float('inf')
-
 # the cost of a node determines how long it will
 # take to get to that node from the STARTING node
 costs = {}
