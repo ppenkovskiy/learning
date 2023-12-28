@@ -1,4 +1,4 @@
-# Remove Duplicates from Sorted List
+# Remove Duplicates from Sorted Linked List
 
 class ListNode:
     def __init__(self, val=None):
