@@ -1,5 +1,5 @@
 class Tutorial:
-    title = 'class attribute'
+    title = 'This is class attribute' # class attribute
 
     def __init__(self, name):
         self.name = name  # local attribute
