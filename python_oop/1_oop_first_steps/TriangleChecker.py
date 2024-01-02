@@ -4,11 +4,16 @@ class TriangleChecker:
 
     def is_triangle(self):
         for num in self.lst:
-            if not isinstance(num, int) or num <= 0:
+            if type(num) not in (float, int) or num <= 0:
                 return 1
         if max(self.lst) >= sum(self.lst) - max(self.lst):
             return 2
         return 3
+
+
+a, b, c = map(int, input().split())
+tr = TriangleChecker(a, b, c)
+print(tr.is_triangle())
 
 
 a, b, c = map(int, input().split())
