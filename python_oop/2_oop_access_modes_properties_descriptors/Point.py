@@ -12,7 +12,7 @@ class Point:
         else:
             raise ValueError("Invalid coordinates")
 
-    # setter
+    # setter (interface methods)
     def set_coord(self, x, y):
         if self.__check_value(x) and self.__check_value(y):
             self.__x = x
@@ -21,7 +21,7 @@ class Point:
         else:
             raise ValueError("Invalid coordinates")
 
-    # getter
+    # getter (interface methods)
     def get_coord(self):
         return self.__x, self.__y
 
