@@ -26,11 +26,10 @@ class GamePole:
             m += 1
 
         indx = (-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)
-
         for x in range(self._n):
             for y in range(self._n):
-                if not self.pole[x][y].mine == False:
-                    mines = sum((self.pole[x+i][y+j].mine for i, j in indx if 0 <= x+i < self._n and 0 <= y+j < self._n))
+                if not self.pole[x][y].mine:
+                    mines = sum((self.pole[x + i][y + j].mine for i, j in indx if 0 <= x + i < self._n and 0 <= y + j < self._n))
                     self.pole[x][y].around_mines = mines
 
     def show(self):

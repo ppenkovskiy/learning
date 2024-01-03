@@ -6,7 +6,6 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        # Link to the first node of the list.
         self.head = None
 
     def is_empty(self):
@@ -14,6 +13,7 @@ class LinkedList:
 
     def append(self, data):
         new_node = Node(data)
+
         if self.is_empty():
             self.head = new_node
         else:
