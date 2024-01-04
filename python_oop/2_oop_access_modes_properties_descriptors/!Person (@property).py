@@ -17,5 +17,7 @@ class Person:
 
 
 p = Person('Person_1', 20)
-del p.old
+print(p.old)
+p.old = 30
+print(p.old)
 print(p.__dict__)
