@@ -14,7 +14,7 @@ class Point:
     def check_value(cls, value):
         return type(value) in (int, float)
 
-    # setter (interface methods)
+    # Setter (interface methods)
     def set_coord(self, x, y):
         if self.check_value(x) and self.check_value(y):
             self.__x = x
@@ -23,7 +23,7 @@ class Point:
         else:
             raise ValueError("Coordinates should be in (int, float)")
 
-    # getter (interface methods)
+    # Getter (interface methods)
     def get_coord(self):
         return self.__x, self.__y
 
