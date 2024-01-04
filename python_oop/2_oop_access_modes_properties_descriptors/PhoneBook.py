@@ -25,9 +25,7 @@ class PhoneBook:
         return self.phones
 
     def get_phone_list(self):
-        if self.phones:
-            return self.phones
-        return []
+        return self.phones
 
 
 p = PhoneBook()
