@@ -24,7 +24,6 @@ class TableSheet:
         self.cells = [[Cell() for _ in range(M)] for _ in range(N)]
 
 
-
 table = TableSheet(5, 3)
 n = 1.0
 for i in range(5):
