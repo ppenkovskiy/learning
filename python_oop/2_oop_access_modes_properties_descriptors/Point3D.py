@@ -37,6 +37,5 @@ class Point3D:
         self._z = coord
 
 
-
-p = Point3D(1,2, 3)
+p = Point3D(1, 2, 3)
 print(p.__dict__)

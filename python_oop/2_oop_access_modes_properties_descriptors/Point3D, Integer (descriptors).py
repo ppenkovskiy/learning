@@ -11,7 +11,6 @@ class Integer:
         return getattr(instance, self.name)
 
     def __set__(self, instance, value):
-        # print(f"__set__: {self.name} = {value}")
         self.verify_coord(value)
         setattr(instance, self.name, value)
 
