@@ -11,9 +11,11 @@ class StripChars:
 
 s1 = StripChars('?:!.; ')
 s2 = StripChars(' ')
-res_1 = s1(' Hellow World! ')
-res_2 = s2(' Hellow World! ')
+res_1 = s1(' Hello World! ')
+res_2 = s2(' Hello World! ')
 print(res_1)
 print(res_2)
+
+
 
 
