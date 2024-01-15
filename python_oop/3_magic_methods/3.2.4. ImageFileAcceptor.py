@@ -2,8 +2,10 @@ class ImageFileAcceptor:
     def __init__(self, extensions):
         self.extensions = extensions
 
-    def __call__(self, *args):
-        return any(args[0].endswith(ext) for ext in self.extensions)
+    def __call__(self, name, *args, **kwargs):
+        start = name.rfind('.')
+        ext = "" if start==-1 else name[start+1:]
+        return ext in self.extensions
 
 
 filenames = ["boat.jpg", "web.png", "text.txt", "python.doc", "ava.jpg", "forest.jpeg", "eq_1.png", "eq_2.png"]
