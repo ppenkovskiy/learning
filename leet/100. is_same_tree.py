@@ -6,7 +6,7 @@ class TreeNode:
 
 
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+    def isSameTree(self, p, q):
         if (p == None and q != None) or (q == None and p != None):
             return False
         elif p == None and q == None:
