@@ -14,12 +14,11 @@ def are_trees_equal(tree1, tree2):
     else:
         return False
 
+
 tree1 = TreeNode(1)
 tree1.left = TreeNode(2)
 tree1.right = TreeNode(3)
-
 tree2 = TreeNode(1)
 tree2.left = TreeNode(2)
 tree2.right = TreeNode(3)
-
 print(are_trees_equal(tree1, tree2))

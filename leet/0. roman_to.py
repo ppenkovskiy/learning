@@ -1,5 +1,5 @@
 class Solution:
-    def romanToInt(self, s: str) -> int:
+    def roman_to_int(self, s: str) -> int:
         translations = {
             "I": 1,
             "V": 5,
@@ -9,14 +9,18 @@ class Solution:
             "D": 500,
             "M": 1000
         }
+
         number = 0
+
         s = s.replace("IV", "IIII").replace("IX", "VIIII")
         s = s.replace("XL", "XXXX").replace("XC", "LXXXX")
         s = s.replace("CD", "CCCC").replace("CM", "DCCCC")
+
         for char in s:
             number += translations[char]
+
         return number
 
 
 s = Solution()
-print(s.romanToInt("MCMXCIV"))
+print(s.roman_to_int("MCMXCIV"))

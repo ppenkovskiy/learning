@@ -9,6 +9,10 @@ class Tree:
         self.root = None
 
     def __find(self, node, parent, value):
+        """The __find method is a recursive helper function for finding
+        a node with a specific value in the tree. It returns the found
+        node, its parent, and a boolean indicating whether the value was found."""
+
         if node is None:
             return None, parent, False
 
@@ -26,6 +30,10 @@ class Tree:
         return node, parent, False
 
     def append(self, obj):
+        """The append method adds a new node to the tree while maintaining the binary
+        tree property. If the tree is empty, the new node becomes the root. Otherwise,
+        it uses the __find method to locate the appropriate position for the new node."""
+
         if self.root is None:
             self.root = obj
             return obj
@@ -111,4 +119,5 @@ for x in v:
     t.append(Node(x))
 
 t.del_node(5)
+
 t.show_wide_tree(t.root)
