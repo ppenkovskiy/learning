@@ -1,8 +1,6 @@
 # lists in Python are implemented as dynamic arrays of references!
 marks = [2, 2, 3, 4]
-lst = [True, 'True', 1, 1.0]
-
-lst.append(5)  # O(1)
+lst = [True, 'True', 1, 1.0, 5]
 
 lst.insert(0, 'First')  # O(n)
 
