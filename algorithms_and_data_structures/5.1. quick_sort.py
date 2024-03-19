@@ -1,4 +1,5 @@
-# Quicksort- O(n*log_n)
+# quicksort
+# O(n*log_n)
 def quicksort(array):
     if len(array) <= 1:  # base case
         return array
