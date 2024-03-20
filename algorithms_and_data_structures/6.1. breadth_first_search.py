@@ -5,7 +5,7 @@ class Node:
         self.val = key
 
 
-# Breadth first search.
+# breadth first search.
 def breadth_first_search(root):
     if root is None:
         return []
@@ -25,19 +25,19 @@ def breadth_first_search(root):
     return result
 
 
-# Example usage:
-# Constructing a simple binary tree:
+# example usage:
+# constructing a simple binary tree:
 #         1
 #        / \
 #       2   3
 #      / \
-#     4   5
+#     10  4
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(10)
 root.left.right = Node(4)
 
-# Perform BFS and print the result
+# perform BFS and print the result
 result_bfs = breadth_first_search(root)
 print("Breadth-First Search:", result_bfs)

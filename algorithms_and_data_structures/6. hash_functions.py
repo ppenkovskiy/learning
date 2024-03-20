@@ -26,6 +26,7 @@ value = d['one']
 # set - implemented based on hash tables
 s = {'one', 'two', 'three'}  # difference from dict - set contains only keys without values
 print(s)
+
 # set should contain only hashable types
 try:
     s = {'one', 'two', 'three', [1, 2, 3]}
