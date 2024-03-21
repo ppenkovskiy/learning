@@ -18,11 +18,14 @@ class LinkedList:
             self.head = new_node
         else:
             current_node = self.head
-            # Going to the end of the list.
+            # going to the end of the list
             while current_node.next_node:
                 current_node = current_node.next_node
+
+            # appending new node to the end of the list
             current_node.next_node = new_node
 
+    # prepend - adding new node to the beginning of the list
     def prepend(self, data):
         new_node = Node(data)
         new_node.next_node = self.head
@@ -53,13 +56,17 @@ class LinkedList:
 
 
 linked_list = LinkedList()
+
 linked_list.append(1)
 linked_list.append(2)
 linked_list.append(3)
-linked_list.display()  # Displaying: 1 -> 2 -> 3
+linked_list.display()  # output: 1 -> 2 -> 3
 
 linked_list.prepend(0)
-linked_list.display()  # Displaying: 0 -> 1 -> 2 -> 3
+linked_list.display()  # output: 0 -> 1 -> 2 -> 3
 
 linked_list.delete(2)
-linked_list.display()  # Displaying: 0 -> 1 -> 3
+linked_list.display()  # output: 0 -> 1 -> 3
+
+linked_list.delete(3)
+linked_list.display()

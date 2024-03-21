@@ -1,5 +1,3 @@
-# https://stepik.org/lesson/701983/step/10?unit=702084
-
 class ObjList:
     def __init__(self, data):
         self.__data = data

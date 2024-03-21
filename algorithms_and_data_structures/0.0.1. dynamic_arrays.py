@@ -1,4 +1,4 @@
-# lists in Python are implemented as dynamic arrays of references!
+# lists in Python are implemented as dynamic arrays of references
 marks = [2, 2, 3, 4]
 lst = [True, 'True', 1, 1.0, 5]
 
