@@ -32,6 +32,7 @@ class LinkedList:
             self.tail.set_next(obj)
         obj.set_prev(self.tail)
         self.tail = obj
+
         if not self.head:
             self.head = obj
 
@@ -43,6 +44,7 @@ class LinkedList:
             prev.set_next(None)
 
         self.tail = prev
+
         if self.tail is None:
             self.head = None
 

@@ -70,6 +70,7 @@ class Tree:
                     vn += [x.left]
                 if x.right:
                     vn += [x.right]
+
             print()
             v = vn
 
@@ -113,14 +114,12 @@ class Tree:
 
 
 v = [20, 5, 24, 2, 16, 11, 18]
-# v = [-10, -3, 0, 5, 9]
-# v = v[len(v)//2:]+v[:len(v)//2]
 print(v)
 
 t = Tree()
 for x in v:
     t.append(Node(x))
 
-# t.del_node(5)
+t.del_node(5)
 
 t.show_wide_tree(t.root)
