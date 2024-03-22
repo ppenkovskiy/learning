@@ -1,5 +1,7 @@
 from collections import deque
 
+
+# deque in fact is a doubly linked list
 dq = deque()  # creating empty queue
 print(dq)
 

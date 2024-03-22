@@ -38,6 +38,7 @@ class Tree:
             self.root = obj
             return obj
 
+        # None - because parent node for root=None
         s, p, fl_find = self.__find(self.root, None, obj.data)
 
         if not fl_find and s:
@@ -59,18 +60,17 @@ class Tree:
     def show_wide_tree(self, node):
         if node is None:
             return
-
+        # v - list of nodes of current level
         v = [node]
         while v:
+            # vn - list of nodes of the next level
             vn = []
             for x in v:
                 print(x.data, end=' ')
-
                 if x.left:
                     vn += [x.left]
                 if x.right:
                     vn += [x.right]
-
             print()
             v = vn
 
@@ -98,6 +98,9 @@ class Tree:
         return node, parent
 
     def del_node(self, key):
+        # s - node you want to delete
+        # p - parent of the node you want to delete
+        # fl_find (flag find) - is this node (s) exists in the tree
         s, p, fl_find = self.__find(self.root, None, key)
 
         if not fl_find:
@@ -120,6 +123,4 @@ t = Tree()
 for x in v:
     t.append(Node(x))
 
-t.del_node(5)
-
-t.show_wide_tree(t.root)
+t.show_tree(t.root)

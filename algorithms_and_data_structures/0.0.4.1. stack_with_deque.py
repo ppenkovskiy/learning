@@ -10,22 +10,23 @@
 # print(value)
 
 # if the stack can contain thousands of elements the best way is using deque
+# and not using Python lists (dynamic arrays)
 from collections import deque
 
-stack = deque([1,2,3])
+stack = deque([1, 2, 3])
 stack.append(4)
 stack.append(5)
 print(stack)
 last_element_in_stack = stack.pop()
 print(last_element_in_stack)
 print(stack)
-# OR
+
+# another way
 print('Another way to implement a stack:')
-stack = deque([1,2,3])
+stack = deque([1, 2, 3])
 stack.appendleft(0)
 stack.appendleft(-1)
 print(stack)
 last_element_in_stack = stack.popleft()
 print(last_element_in_stack)
 print(stack)
-
