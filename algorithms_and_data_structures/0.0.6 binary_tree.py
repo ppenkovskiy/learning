@@ -117,10 +117,9 @@ class Tree:
 
 
 v = [20, 5, 24, 2, 16, 11, 18]
-print(v)
 
 t = Tree()
 for x in v:
     t.append(Node(x))
 
-t.show_tree(t.root)
+t.show_wide_tree(t.root)
