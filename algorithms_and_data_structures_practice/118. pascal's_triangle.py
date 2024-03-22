@@ -20,5 +20,6 @@ def generate(numRows):
 
     return result
 
-for i in range(1,11):
+
+for i in range(1, 11):
     print(generate(i))
