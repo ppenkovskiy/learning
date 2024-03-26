@@ -5,13 +5,14 @@ class Node:
 
 
 class Tree:
-    def __init__(self):
-        self.root = None
+    def __init__(self, root=None):
+        self.root = root
 
     def __find(self, node, parent, value):
         """The __find method is a recursive helper function for finding
-        a node with a specific value in the tree. It returns the found
-        node, its parent, and a boolean indicating whether the value was found."""
+        a node with a specific value in the tree. It returns the  found
+        node, its parent, and a boolean indicating  whether  the  value
+        was found."""
 
         if node is None:
             return None, parent, False
@@ -38,7 +39,7 @@ class Tree:
             self.root = obj
             return obj
 
-        # None - because parent node for root=None
+        # parent:None - cs parent node for root == None
         s, p, fl_find = self.__find(self.root, None, obj.data)
 
         if not fl_find and s:
