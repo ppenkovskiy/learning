@@ -3,19 +3,18 @@ class HandlerGET:
         self.__methods = methods
 
     def __call__(self, request, *args, **kwargs):
-        dfe
 
         method = request.get('method', 'GET')
-        if method == 'GET' and 'GET' in self.methods:
+        if method == 'GET' and 'GET' in self.__methods:
             return self.get(self.func, request)
-        elif method == 'POST' and 'POST' in self.methods:
+        elif method == 'POST' and 'POST' in self.__methods:
             return self.post(self.func, request)
         return None
 
     def get(self, func, request, *args, **kwargs):
         return f'POST: {func(request)}'
 
-    def post(self, func, requests, *args, **kwargs):
+    def post(self, func, request, *args, **kwargs):
         return f'POST: {func(request)}'
 
 

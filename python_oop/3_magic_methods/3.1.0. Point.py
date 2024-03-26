@@ -12,12 +12,14 @@ class Point:
             self.y = y
 
     @classmethod
-    def set_bound(cls, left):
+    def set_left_bound(cls, left):
         cls.MIN_COORD = left
 
-    # this method is always calling when we want to get some existing class attribute
+    # all classes in python implicitly inherit from the object class
+    # this method is always calling when we want to get some existing
+    # class attribute
     def __getattribute__(self, item):
-        # Self - link to the instance of the class.
+        # self - link to the instance of the class.
         # print('__getattr__')
         if item == 'x':
             raise ValueError('Access denied')
@@ -27,7 +29,7 @@ class Point:
     def __setattr__(self, key, value):
         print(f"Setting attribute '{key}' value {value}")
         if value == 100:
-            raise ValueError('Sorry, but value should not be 100')
+            raise ValueError("Sorry, but value shouldn't be 100")
         else:
             object.__setattr__(self, key, value)
 
@@ -42,15 +44,15 @@ class Point:
 
 pt1 = Point(1, 2)
 pt2 = Point(10, 20)
-# a = pt1.x
-# print(a)
-# a = pt1.y
-# print(a)
-# pt1.x = 100
-pt1.y = 200
+# print(pt1.set_left_bound(-100))
+# print(pt1.__dict__)
+# __dict__ show all attributes of class
+# print(Point.__dict__)
+# pt1.y = 5  # calling __getattribute__ magic method
 # print(pt1.y)
-print(pt1.qwe)
-pt1.qwe = 101
-print(pt1.qwe)
-del pt1.qwe
+# pt1.z = 100
+# when we try to access to non-existent class attribute
+# __getattr__ magic method is calling
+# print(pt1.qwe)
+del pt1.x
 print(pt1.__dict__)
