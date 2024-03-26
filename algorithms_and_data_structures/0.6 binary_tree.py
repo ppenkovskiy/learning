@@ -122,4 +122,4 @@ t = Tree()
 for x in v:
     t.append(Node(x))
 
-t.show_wide_tree(t.root)
+t.show_tree(t.root)
