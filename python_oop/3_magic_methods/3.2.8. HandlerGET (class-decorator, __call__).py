@@ -3,6 +3,7 @@ class HandlerGET:
         self.func = func
 
     def __call__(self, request, *args, **kwargs):
+        # default value == "GET"
         m = request.get('method', 'GET')
         if m == 'GET':
             return self.get(self.func, request)

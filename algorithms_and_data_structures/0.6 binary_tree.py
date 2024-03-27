@@ -50,14 +50,15 @@ class Tree:
 
         return obj
 
-    def show_tree(self, node):
+    def inorder_traversal(self, node):
         if node is None:
-            return
+            return []
 
-        self.show_tree(node.left)
-        print(node.data)
-        self.show_tree(node.right)
-
+        result = []
+        result += self.inorder_traversal(node.left)
+        result.append(node.data)
+        result += self.inorder_traversal(node.right)
+        return result
 
     def show_wide_tree(self, node):
         if node is None:
@@ -124,4 +125,4 @@ t = Tree()
 for x in v:
     t.append(Node(x))
 
-t.show_tree(t.root)
+print(t.inorder_traversal(t.root))
